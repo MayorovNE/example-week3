@@ -1,0 +1,127 @@
+<mat-toolbar [color]="themeColor" class="flexbox-conteiner">
+  <div>
+    <div [ngSwitch]="countSwitch">
+      <ng-template ngSwitchCase="2">
+        <button mat-button [matMenuTriggerFor]="menu">{{'ItsMenu' | translate}}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialogUserPage()" >
+            {{'UserPagePageButton' | translate}}
+          </button>
+          <button mat-menu-item (click)="openDialogNavigation()" >
+            {{'NavigationPageButton' | translate}}
+          </button>
+        </mat-menu>
+      </ng-template>
+      <ng-template ngSwitchCase="1">
+        <button mat-button [matMenuTriggerFor]="menu">{{'ItsMenu' | translate}}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialogAdminPage()">
+            {{'AdministrationPageButton' | translate}}
+          </button>
+          <button mat-menu-item (click)="openDialogNavigation()">
+            {{'NavigationPageButton' | translate}}
+          </button>
+        </mat-menu>
+      </ng-template>
+      <ng-template ngSwitchCase="3">
+        <button mat-button [matMenuTriggerFor]="menu">{{'ItsMenu' | translate}}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialogUserPage()">
+            {{'UserPagePageButton' | translate}}
+          </button>
+          <button mat-menu-item (click)="openDialogNavigation()" >
+            {{'NavigationPageButton' | translate}}
+          </button>
+        </mat-menu>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="flexbox-child2">
+
+  </div>
+
+  <div [ngSwitch]="countSwitch">
+    <ng-template ngSwitchCase="2">
+      <div  class="flexbox-child3">
+        <button (click)="dropAdminMenu1(true)" mat-raised-button color="primary">
+          {{'CallAdminPanel' | translate}}
+        </button>  
+      </div>
+    </ng-template>
+    <ng-template ngSwitchCase="1">
+      <div class="flexbox-child3">
+        <div>
+          <mat-slide-toggle color='primary' [(ngModel)]="themeCount">
+          </mat-slide-toggle>
+        </div>
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>
+              favorite
+            </mat-icon>
+          </button>  
+        </div>
+        <div>
+          <button mat-icon-button color="black" (click)="openDialogShoppingCartPage()">
+            <mat-icon matBadge={{cartCount}} matBadgeColor="primary">
+              shopping_cart
+            </mat-icon>
+          </button>        
+        </div>
+        <div>
+          <button mat-icon-button color="black" [matMenuTriggerFor]="menu1">
+            <mat-icon>
+              g_translate
+            </mat-icon>
+          </button>
+          <mat-menu #menu1="matMenu">
+            <button mat-menu-item (click)="switchLanguage('rus')">
+              <span translate>RusTranslate</span>
+            </button>
+            <button mat-menu-item (click)="switchLanguage('en')" >
+              <span translate>EngTranslate</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngSwitchCase="3">
+      <div class="flexbox-child3">
+        <div>
+          <mat-slide-toggle color='primary' [(ngModel)]="themeCount">
+          </mat-slide-toggle>
+        </div>
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>
+              favorite
+            </mat-icon>
+          </button>  
+        </div>
+        <div>
+          <button mat-icon-button color="black" (click)="openDialogShoppingCartPage()">
+            <mat-icon matBadge={{cartCount}} matBadgeColor="primary">
+              shopping_cart
+            </mat-icon>
+          </button>        
+        </div>
+        <div>
+          <button mat-icon-button color="black" [matMenuTriggerFor]="menu1">
+            <mat-icon>
+              g_translate
+            </mat-icon>
+          </button>
+          <mat-menu #menu1="matMenu">
+            <button mat-menu-item (click)="switchLanguage('rus')">
+              <span translate>RusTranslate</span>
+            </button>
+            <button mat-menu-item (click)="switchLanguage('en')">
+              <span translate>EngTranslate</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,13 @@
+.flexbox-conteiner {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 8%;
+}
+.flexbox-child2 {
+  flex: 2;
+}
+.flexbox-child3 {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,26 @@
+.active a {
+    color: red;
+   }
+.nav{
+    clear: both;
+   }
+.style1{
+    display:flex;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+button{
+    border-radius: 5px; 
+    background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+}
+button:hover{
+    border-radius: 5px; 
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+}
+span{
+    font-size: 20px;
+}

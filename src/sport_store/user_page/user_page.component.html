@@ -1,0 +1,64 @@
+<Toolbar_sportstore-root [countSwitch]="countToToolbar">
+</Toolbar_sportstore-root>
+<div class="shopping_card_all" *ngFor="let item of items">  
+  <div class="shopping_card_space1">
+
+  </div>
+  <mat-card class="shopping_card">
+    <mat-card-content class="flexbox-conteiner">
+      <div class="flexbox-child1">
+        <img mat-card-image src="https://liketo.ru/upload/iblock/b42/6835.10_3_tif_1000x1000.jpg">
+      </div>
+      <div class="flexbox-child2">
+        <div class="child-header">
+          <span>
+            <h3>{{'Name' | translate}}:</h3>
+            {{item.name}}
+          </span>
+        </div>            
+        <div>
+          <span>
+            <h4>{{'Description' | translate}}:</h4>
+            <span translate>{{item.description}}</span>
+          </span>
+        </div>
+      </div>
+      <div class="flexbox-child3">
+        <div class="child-header">
+          <span>
+            <h4>{{'Category' | translate}}:</h4>
+            <span translate>{{item.category}}</span>
+          </span>
+        </div>
+        <div>
+          <span>
+            <h4>{{'Price' | translate}}:</h4>
+            {{item.price}}
+          </span>                
+        </div>            
+        <div class="flexbox-space">
+           
+        </div>
+        <div class="icons-flexbox-parent">
+          <div class="icons-flexbox-child1">
+            <button mat-icon-button color="warn" (click)="addToWishlist()">
+              <mat-icon>
+                favorite
+              </mat-icon>
+            </button>
+          </div>
+          <div class="icons-flexbox-child2">
+            <button mat-icon-button color="black" (click)="addToShoppingCart(item.name, item.description, item.category, item.price)">
+              <mat-icon>
+                shopping_cart
+              </mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div class="shopping_card_space2">
+
+  </div>
+</div>

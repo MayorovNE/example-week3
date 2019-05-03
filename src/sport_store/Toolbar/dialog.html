@@ -1,0 +1,33 @@
+<div mat-dialog-content>
+  <div [ngSwitch]="switchText">
+    <ng-template ngSwitchCase="0">
+      <span translate>HDialog1</span>
+    </ng-template>
+    <ng-template ngSwitchCase="1">
+      <span translate>HDialog2</span>
+    </ng-template>
+    <ng-template ngSwitchCase="2">
+      <span translate>HDialog3</span>
+    </ng-template>
+    <ng-template ngSwitchCase="3">
+      <span translate>HDialog4</span>
+    </ng-template>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">{{'NoAnswer' | translate}}</button>
+  <div [ngSwitch]="switchText">
+    <ng-template ngSwitchCase="0">
+      <button mat-button (click)="backToNavigation()">{{'YesAnswer' | translate}}</button>
+    </ng-template>
+    <ng-template ngSwitchCase="1">
+      <button mat-button (click)="backToUserPage()">{{'YesAnswer' | translate}}</button>
+    </ng-template>
+    <ng-template ngSwitchCase="2">
+      <button mat-button (click)="goToAdminPage()">{{'YesAnswer' | translate}}</button>
+    </ng-template>
+    <ng-template ngSwitchCase="3">
+      <button mat-button (click)="goToShoppingCart()">{{'YesAnswer' | translate}}</button>
+    </ng-template>
+  </div>
+</div>

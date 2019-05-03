@@ -1,0 +1,49 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="{{'Filter' | translate}}">
+</mat-form-field>
+      
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+              
+  <!-- name Column -->
+    <ng-container matColumnDef="name">
+      <th class="name" mat-header-cell *matHeaderCellDef mat-sort-header> {{'Name' | translate}} </th>
+      <td class="name" mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+      
+  <!-- description Column -->
+    <ng-container matColumnDef="description">
+      <th class="description" mat-header-cell *matHeaderCellDef mat-sort-header> {{'Description' | translate}} </th>
+      <td class="description" mat-cell *matCellDef="let row"> {{row.description}} </td>
+    </ng-container>
+      
+  <!-- category Column -->
+    <ng-container matColumnDef="category">
+      <th class="category" mat-header-cell *matHeaderCellDef mat-sort-header> {{'Category' | translate}} </th>
+      <td class="category" mat-cell *matCellDef="let row"> {{row.category}} </td>
+    </ng-container>
+      
+  <!-- price Column -->
+    <ng-container matColumnDef="price">
+      <th class="price" mat-header-cell *matHeaderCellDef mat-sort-header> {{'Price' | translate}} </th>
+      <td class="price" mat-cell *matCellDef="let row"> {{row.price}} </td>
+    </ng-container>
+
+  <!-- action Column -->
+    <ng-container matColumnDef="action">
+      <th class="price" mat-header-cell *matHeaderCellDef mat-sort-header> {{'Action' | translate}} </th>
+      <td class="price" mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="removeItem(row.name)">
+          <mat-icon>
+            delete_forever
+          </mat-icon>
+        </button>
+      </td>
+    </ng-container>
+      
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>      
+  <mat-paginator [pageSizeOptions]="[10, 15, 20]">
+  </mat-paginator>
+</div>

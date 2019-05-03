@@ -1,0 +1,31 @@
+.conteiner-sidenav {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.example-container {
+  display: flex; 
+  height: 92%;
+}
+.content-conteiner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: center;
+}
+.freeblock {
+  flex: 1;
+  height: 92vh;
+  align-self: stretch;
+}
+.content-block {
+  flex: 1;
+  align-self: center;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,52 @@
+.example-card {
+  max-width: 400px;
+}
+.flexbox-conteiner {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.flexbox-child1 {
+  flex: 1;
+}
+.flexbox-child2 {
+  flex: 3;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+.flexbox-child3 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.icons-flexbox-parent {
+  display: flex;
+  flex-direction: row;
+}
+.icons-flexbox-child1{
+  flex: 1;
+  align-self: flex-end;
+}
+.icons-flexbox-child2 {
+  flex: 1;
+  align-self: flex-end;
+}
+.flexbox-space {
+  flex: 2;
+}
+.child-header {
+  min-height: 40px;
+}
+.shopping_card {
+  flex: 3;
+}
+.shopping_card_all {
+  display: flex;
+  flex-direction: row;
+}
+.shopping_card_space1 {
+  flex: 1;
+}
+.shopping_card_space2 {
+  flex: 1;
+}

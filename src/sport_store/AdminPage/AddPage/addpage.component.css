@@ -1,0 +1,22 @@
+.add-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+}
+.input_from_addform {
+  flex: 1;
+}
+.conteiner1 {
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.conteiner2 {
+  flex: 1;
+}
+.freeblock {
+  flex: 1;
+}

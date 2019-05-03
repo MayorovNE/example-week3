@@ -1,0 +1,35 @@
+<div class="add-form">
+
+  <div class="freeblock">
+
+  </div>
+
+  <div class="conteiner1">
+    <mat-form-field class="input_from_addform">
+      <input matInput placeholder="{{'Name' | translate}}" [(ngModel)] ="inputName" required>
+    </mat-form-field>
+    
+    <mat-form-field class="input_from_addform">
+      <input matInput placeholder="{{'Description' | translate}}" [(ngModel)] ="inputDescription" required>
+    </mat-form-field>
+
+    <mat-form-field class="input_from_addform">
+      <input matInput placeholder="{{'Category' | translate}}" [(ngModel)] ="inputCategory" required>
+    </mat-form-field>
+
+    <mat-form-field class="input_from_addform">
+      <input matInput type="number" pattern="^[ 0-9]+$" placeholder="{{'Price' | translate}}" [(ngModel)] ="inputPrice" required>
+    </mat-form-field>
+  </div>
+
+  <div class="conteiner2">
+    <button mat-raised-button (click)="addItem(inputName, inputDescription, inputCategory, inputPrice)">
+      {{'AddItemTotheStore' | translate}} 
+    </button>
+  </div>
+
+  <div class="freeblock">
+
+  </div>
+
+</div>

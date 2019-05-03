@@ -1,0 +1,43 @@
+<Toolbar_sportstore-root [countSwitch]="countToToolbar"></Toolbar_sportstore-root>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav [(opened)]="opened" class="conteiner-sidenav" #snav mode="over" >
+    <div>
+      <button mat-raised-button (click)="goToAddElementPage()" (click)="closeAdminMenu(false)">
+        {{'AddElementPageButton' | translate}}
+      </button>
+    </div>
+    <div>
+      <button mat-raised-button (click)="goToDeleteElementPage()" (click)="closeAdminMenu(false)">
+        {{'DeleteElementPageButton' | translate}}
+      </button>
+    </div>
+  </mat-sidenav>
+   <mat-sidenav-content class="content">
+    <div *ngIf="addElement">
+      <div class="content-conteiner">
+        <div class="freeblock">
+
+        </div>
+        <div class="content-block">
+          <Add_page_sportstore-root></Add_page_sportstore-root>
+        </div>
+        <div class="freeblock">
+
+        </div>
+      </div>
+    </div>
+    <div *ngIf="deleteElement">
+      <div class="content-conteiner">
+        <div class="freeblock">
+
+        </div>
+        <div class="content-block">
+          <Delete_page_sportstore-root></Delete_page_sportstore-root>
+        </div>
+        <div class="freeblock">
+    
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
